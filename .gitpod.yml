@@ -35,3 +35,4 @@ vscode:
     - redhat.fabric8-analytics
     - ms-azuretools.vscode-docker
     - aws-scripting-guy.cform
+    - ms-python.python
