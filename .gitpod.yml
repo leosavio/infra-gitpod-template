@@ -36,3 +36,4 @@ vscode:
     - ms-azuretools.vscode-docker
     - aws-scripting-guy.cform
     - ms-python.python
+    - Vue.volar
