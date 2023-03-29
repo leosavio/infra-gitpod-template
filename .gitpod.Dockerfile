@@ -5,7 +5,7 @@ RUN bash -c "sudo install-packages gettext tmux htop"
 # Brew packages
 RUN bash -c "brew install gh fio golang cowsay lolcat terraform gum"
 # Java, Maven and Quarkus
-ARG JAVA_VERSION=22.2.r17-grl
+ARG JAVA_VERSION=22.3.r19-grl
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && sdk install java ${JAVA_VERSION} && sdk default java ${JAVA_VERSION} && sdk install maven &&  sdk install quarkus"
 # Flyway Database Migration CLI
 RUN bash -c "mkdir -p '/tmp/flyway' && wget -nv -O '/tmp/flyway/flyway-commandline-8.5.11-linux-x64.tar.gz' 'https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/8.5.11/flyway-commandline-8.5.11-linux-x64.tar.gz' && tar zxvf '/tmp/flyway/flyway-commandline-8.5.11-linux-x64.tar.gz' -C '/tmp/flyway/' && sudo mv '/tmp/flyway/flyway-8.5.11' '/usr/local/flyway' && sudo ln -s '/usr/local/flyway/flyway' '/usr/local/bin/flyway' && rm -rf '/tmp/flyway'"
